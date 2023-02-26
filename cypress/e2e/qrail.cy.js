@@ -9,5 +9,6 @@ describe('Qatar Rail', () => {
 
   it('Hi',()=>{
     
+    cy.log('Hello')
   })
 })
