@@ -1,12 +1,17 @@
 {
   "devDependencies": {
+    "allure-commandline": "^2.21.0",
     "cypress": "^12.5.1",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.3.0",
     "cypress-plugin-tab": "^1.0.5",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "dependencies": {
     "cypress-real-events": "^1.7.6"
+  },
+  "scripts": {
+    "cypress:open": "npx cypress run --env allure=true,allureResultsPath=cypress/reports/html/AllureResults"
   }
 }
