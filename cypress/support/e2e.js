@@ -18,5 +18,5 @@ import './commands'
 require('cypress-xpath')
 import 'cypress-iframe'
 import 'cypress-mochawesome-reporter/register';
-
+import '@shelex/cypress-allure-plugin';
 // Alternatively you can use CommonJS syntax:
