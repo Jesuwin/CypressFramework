@@ -1,17 +1,17 @@
 {
-  "name": "cypressautomation",
-  "version": "1.0.0",
-  "description": "Jesuwin's cypress automation",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Jesuwin",
-  "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.5.1"
+    "allure-commandline": "^2.21.0",
+    "cypress": "^12.5.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^2.0.1",
+    "mocha-allure-reporter": "^1.4.0"
   },
   "dependencies": {
-    "cypress-xpath": "^2.0.1"
+    "cypress-real-events": "^1.7.6"
+  },
+  "scripts": {
+    "cypress:open": "npx cypress run --env allure=true,allureResultsPath=cypress/reports/html/AllureResults"
   }
 }
