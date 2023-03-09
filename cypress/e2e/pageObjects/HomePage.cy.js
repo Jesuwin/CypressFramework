@@ -1,12 +1,15 @@
 class HomePage{
+///<reference types="Cypress"/>
+//elements= {
 
-elements= {
+   // registerBtn : ()=> cy.get('.box-body > .ng-star-inserted > .btn')
 
-    registerBtn : ()=> cy.get('btn. btn-secondary .btn-shadow');
+//}
 
-
-
-
+clickOnRegister()
+{
+   // this.elements.registerBtn.click();
+   cy.get('.box-body > .ng-star-inserted > .btn').click();
 }
 
 }
