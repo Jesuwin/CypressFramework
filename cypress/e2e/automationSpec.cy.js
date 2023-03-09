@@ -1,6 +1,9 @@
+import HomePage from '../e2e/pageObjects/HomePage.cy';
+import registerPage from '../e2e/pageObjects/registerPage.cy';
 describe('Qatar Rail Testing',()=>{
  
- 
+ const homeObj= new HomePage();
+ const registerObj= new registerPage();
   beforeEach(()=>{
     cy.visit('https://www.qr.com.qa/');
   })
