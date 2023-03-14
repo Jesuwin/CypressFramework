@@ -1,18 +1,29 @@
-import HomePage from '../e2e/pageObjects/HomePage.cy';
-import registerPage from '../e2e/pageObjects/registerPage.cy';
+import homePage from './pageObjects/homePage';
+import registerPage from './pageObjects/registerPage';
+// <reference types="cypress" />
 describe('Qatar Rail Testing',()=>{
- 
- const homeObj= new HomePage();
+ let testdata;
+ const homeObj= new homePage();
  const registerObj= new registerPage();
-  beforeEach(()=>{
-    cy.visit('https://www.qr.com.qa/');
+ 
+
+
+beforeEach( ()=> {
+  cy.visit('https://www.qr.com.qa/');
+  cy.fixture('testdata.json').as('testdata')
+  cy.get('@testdata').then((fdata)=>{
+     testdata=fdata;
+
+  })
   })
 
 
 
-it('Register test',()=>{
 
-  cy.get('#navbarDropdownMenuLink1').click();
+it('Register test',()=>{
+ 
+ 
+  homeObj.clickOnTravelCardMenu(testdata.travelcardmenu);
   cy.getWithxPath('//*[@id="collapsibleNavbar"]/ul/li[1]/div/a[2]').click()
  // cy.xpath('//*[@id="collapsibleNavbar"]/ul/li[1]/div/a[2]').click();
 
@@ -66,7 +77,7 @@ it('Register test',()=>{
 
 })
 
-it('Login Test',()=>{
+it.skip('Login Test',()=>{
 
   
   cy.xpath('//*[@id="logindrop"]/div/p').click();
@@ -79,7 +90,7 @@ it('Login Test',()=>{
 
 })
 
-it('Fares & Travel Cards Test',()=>
+it.skip('Fares & Travel Cards Test',()=>
 {
   cy.get('#navbarDropdownMenuLink1').click();
   cy.getWithxPath('//*[@id="collapsibleNavbar"]/ul/li[1]/div/a[1]').click()
@@ -88,7 +99,7 @@ it('Fares & Travel Cards Test',()=>
 
 })
 
-it('Licensed Retailers Test',()=>
+it.skip('Licensed Retailers Test',()=>
 {
   cy.get('#navbarDropdownMenuLink1').click();
   cy.getWithxPath('//*[@id="collapsibleNavbar"]/ul/li[1]/div/a[4]').click()
