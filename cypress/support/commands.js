@@ -56,6 +56,7 @@ Cypress.Commands.add('typeWithGet', (locator, text) => {
 
       });
   });
+
   
 
   Cypress.Commands.add('getWithDataCy',(value)=>
@@ -72,15 +73,8 @@ Cypress.Commands.add('typeWithGet', (locator, text) => {
    cy.xpath(value);
   })
 
+  
 
- Cypress.Commands.add('getData',()=>
- { let testdata;
-  cy.fixture('testdata.json').as('testdata')
-  cy.get('@testdata').then((fdata)=>{
-     testdata=fdata;
-     return testdata;
-  })
+  
 
- })
-
-
+ 
