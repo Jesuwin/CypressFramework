@@ -79,7 +79,7 @@ it('Register test',()=>{
 
 })
 
-it.skip('Login Test',()=>{
+it('Login Test',()=>{
 
   
   cy.xpath('//*[@id="logindrop"]/div/p').click();
@@ -92,7 +92,7 @@ it.skip('Login Test',()=>{
 
 })
 
-it.skip('Fares & Travel Cards Test',()=>
+it('Fares & Travel Cards Test',()=>
 {
   cy.get('#navbarDropdownMenuLink1').click();
   cy.getWithxPath('//*[@id="collapsibleNavbar"]/ul/li[1]/div/a[1]').click()
@@ -101,7 +101,7 @@ it.skip('Fares & Travel Cards Test',()=>
 
 })
 
-it.skip('Licensed Retailers Test',()=>
+it('Licensed Retailers Test',()=>
 {
   cy.get('#navbarDropdownMenuLink1').click();
   cy.getWithxPath('//*[@id="collapsibleNavbar"]/ul/li[1]/div/a[4]').click()
